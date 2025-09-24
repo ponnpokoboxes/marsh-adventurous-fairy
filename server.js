@@ -62,6 +62,12 @@ http
           res.end();
           return;
         }
+        if (dataObject.type == "recordSurvey") {
+          console.log("recordSurvey");
+          meiboAudit_master(dataObject);
+          res.end();
+          return;
+        }
         if (dataObject.type == "chSetting") {
           console.log("chSetting");
           chSetting(dataObject);
